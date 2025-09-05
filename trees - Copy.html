@@ -8,17 +8,22 @@
     <body>
 
         <h1>Click on a tree to chop</h1>
-        <img src="C:\Users\may.wf\Downloads\Truffala_Tree1-removebg-preview.png" style="position: absolute; top: 500px; left: 500px;" alt="Thneed Tree1" usemap="#treemap">
-        <img src="C:\Users\may.wf\Downloads\Truffala_Tree2-removebg-preview.png" alt="Thneed Tree2" usemap="#treemap">
+        <img id="image" src="C:\Users\may.wf\Downloads\Truffala_Tree2-removebg-preview.png" alt="Thneed Tree2" usemap="#treemap">
         <img src="C:\Users\may.wf\Downloads\Truffala_Tree3-removebg-preview.png" alt="Thneed Tree3" usemap="#treemap">
         <img src="C:\Users\may.wf\Downloads\Truffala_Tree1-removebg-preview.png" alt="Thneed Tree1" usemap="#treemap">
         <img src="C:\Users\may.wf\Downloads\Truffala_Tree2-removebg-preview.png" alt="Thneed Tree2" usemap="#treemap">
         <img src="C:\Users\may.wf\Downloads\Truffala_Tree3-removebg-preview.png" alt="Thneed Tree3" usemap="#treemap">
-        <map name="treemap"></map>
-        <script>
-            function rotateImage() {
-                document.getElementById('image').style.transform = `rotate(90deg)`;
+        <map name="treemap">
+            <area href="#hide" shape="rect" coords="0,0,183,309">
+        </map>
+        <img usemap="#treemap" src="C:\Users\may.wf\OneDrive - Oundle School\Documents\Images\Lorax.webp" alt="Lorax">
+        <style>
+            #image {
+                display: block;
             }
-        </script>
+            #hide:target ~ #image {
+                display: none;
+            }
+        </style>
     </body>
 </html>
